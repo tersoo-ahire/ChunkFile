@@ -15,10 +15,6 @@ def about_view(request):
     return render(request, "about.html")
 
 
-def documentation_view(request):
-    return render(request, "documentation.html")
-
-
 def signup_view(request):
     if request.user.is_authenticated:
         return redirect("dashboard")

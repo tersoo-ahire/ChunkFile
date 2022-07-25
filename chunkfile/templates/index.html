@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Website</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'stylesheets/index.css' %}">
+    </head>
+    <body>
+        <header>
+            <!-- Main navigation links -->
+            <div class="topnav" >
+                <nav>
+                    <a class="links" href="{% url 'home' %}">Home</a>
+                    <a class="links" href="{% url 'dashboard' %}">Dashboard</a>
+                    <a class="links" href="{% url 'signup' %}">Sign-up</a>
+                    <a class="links" href="{% url 'signin' %}">sign-in</a>
+                </nav>
+            </div>
+        </header>
+            <main class="mainpage">
+                    <div class ="container1">
+                        <h1>About Me</h1>
+
+                        <!-- Description of me -->
+                        <p style ="font-size: 16px;"><strong>Ahire Tersoo David - Fullstack Web Developer</strong></p>
+                        <p>Hello there, welcome to my profile.</p>
+                        <p>I am a self taught developer that has transitioned from a 
+                            business management oriented career to a tech career. Some of the skills i have been able to 
+                            pickup in a few months include HTML, CSS, JavaScript and Python.
+                        </p>
+
+                        <!-- List of hobbies -->
+                        <h3>My Hobbies</h3>
+                        <ol list-style-type="1">
+                            <li>Listening to Tech Pocasts</li>
+                            <li>Netflix</li>
+                            <li>Football</li>
+                            <li>Online gaming</li>
+                            <li>Coding</li>
+                        </ol>
+
+
+                        <!-- List of other skills -->
+                        <h3>My Skills</h3>
+                        <ol list-style-type="1">
+                            <li>HTML, CSS and Javascript</li>
+                            <li>Python</li>
+                            <li>Google Ads</li>
+                            <li>Business Development</li>
+                            <li>Digital Marketing</li>
+                        </ol>
+                        <button  style ="padding: 20px; width:200px; background-color: rgb(23, 146, 177); border-radius: 7px;">
+                            <a style ="color: white; text-decoration: none; font-size: 20px; " href="{% url 'signup' %}">Sign Up</a>
+                        </button>
+                    </div>
+            </main>   
+            <!-- Footer -->
+            <footer class ="foot">
+                <a class="foots"  href="{% url 'dashboard' %}" target="_blank">Dashboard</a>
+            </footer>
+    </body>
+</html>
